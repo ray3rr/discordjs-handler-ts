@@ -10,7 +10,7 @@ console.log(redBright("Handler created and maintained by"), blueBright("rayerr#1
 fs.readFile(`${process.cwd()}/.env`, (error, data) => {
     if(error){
         console.warn(redBright("Cannot find configuration file, creating new one"))
-        fs.writeFile(`${process.cwd()}/.env`, "# DEBUG INFORMATIONS\nDEBUG=0\n\n# BOT ACCOUNT INFORMATIONS\nTOKEN=\n\n# DATABASE INFORMATIONS\nURI=", (err) => {
+        fs.writeFile(`${process.cwd()}/.env`, "# DEBUG INFORMATIONS\nDEBUG=0\n\n# BOT ACCOUNT INFORMATIONS\nTOKEN=\n\n# DATABASE INFORMATIONS\nURI=\n\n# GITHUB STAFF\nAPI_TOKEN=", (err) => {
             if(err){
                 console.error(redBright("Cannot create configuration file, create it manually"))
             } else {
@@ -19,7 +19,7 @@ fs.readFile(`${process.cwd()}/.env`, (error, data) => {
         })
     } else {
         updater()
-        
+
         console.log(greenBright("Configuration file loaded"))
 
         initialize()
