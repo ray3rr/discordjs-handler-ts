@@ -14,6 +14,5 @@ export default async (client : Client) => {
         })
     })
 
-    // console.log(greenBright("Successful loaded "), blueBright(`${client.commands.size} `), greenBright("commands!"))
     console.log(redBright("Successful loaded"), blueBright(`${client.commands.size}`), redBright("commands"))
 }

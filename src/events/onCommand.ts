@@ -4,7 +4,7 @@ import { Interaction, PermissionsBitField } from "discord.js"
 
 export default {
     name: "interactionCreate",
-    execute: (client:Client, interaction:Interaction) => {
+    execute: (client:Client, interaction: Interaction) => {
         if(!interaction.isCommand())
             return
 

@@ -9,7 +9,6 @@ export default async (client : Client) => {
 
         client.buttons.set(button.id, button)
     })
-
-    // console.log(greenBright("Successful loaded "), blueBright(`${client.commands.size} `), greenBright("commands!"))
+    
     console.log(redBright("Successful loaded"), blueBright(`${client.buttons.size}`), redBright("buttons"))
 }
