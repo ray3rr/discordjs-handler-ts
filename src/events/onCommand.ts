@@ -4,9 +4,11 @@ import { Interaction, PermissionsBitField } from "discord.js"
 
 export default {
     name: "interactionCreate",
-    execute: (client:Client, interaction:Interaction) => {
+    execute: async (client:Client, interaction:Interaction) => {
         if(!interaction.isCommand())
             return
+
+        const member = await interaction.guild?.members.fetch(interaction.user.id)
 
         const command = client.commands.get(interaction.commandName)
         if(!command)
@@ -23,6 +25,8 @@ export default {
             return interaction.reply({
                 content: "You can use this command only in guild!"
             })
+
+        if(command.voiceOnly && !member?.voice.channel)
         
         if(interaction.guildId){
             let botPerms: any = command.permissions.bot

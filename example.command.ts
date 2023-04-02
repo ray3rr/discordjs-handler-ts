@@ -1,18 +1,14 @@
-import Client from "./src/libs/client"
+import Client from "../../libs/client" // COMMENT THIS FOR NO ERRORS
 import { CommandInteraction } from "discord.js"
 
 export default {
-    name: "help",
-    description: "Help command",
+    name: "",
+    description: "",
     options: [],
     permissions: {
         user: [],
         bot: []
     },
     guildOnly: true,
-    execute: (client: Client, interaction: CommandInteraction) => {
-        interaction.reply({
-            content: "Hello"
-        })
-    }
+    execute: (client: Client, interaction: CommandInteraction) => {}
 }

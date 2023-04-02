@@ -13,5 +13,6 @@ export default interface command {
     permissions: permissions,
     devOnly: Boolean,
     guildOnly: Boolean,
+    voiceOnly: Boolean,
     execute: Function 
 }
