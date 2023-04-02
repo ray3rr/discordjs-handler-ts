@@ -3,6 +3,7 @@ import * as fs from "fs"
 import "dotenv/config"
 import { redBright, greenBright, blueBright } from "chalk"
 import initialize from "./src/libs/initialize"
+import updater from "./src/libs/updater"
 
 console.log(redBright("Handler created and maintained by"), blueBright("rayerr#1234\n"))
 
@@ -17,6 +18,8 @@ fs.readFile(`${process.cwd()}/.env`, (error, data) => {
             }
         })
     } else {
+        updater()
+        
         console.log(greenBright("Configuration file loaded"))
 
         initialize()
