@@ -7,6 +7,7 @@ export default () => {
     const client = new Client({
         intents: [
             IntentsBitField.Flags.Guilds,
+            IntentsBitField.Flags.GuildVoiceStates,
             IntentsBitField.Flags.DirectMessages,
             IntentsBitField.Flags.MessageContent,
             IntentsBitField.Flags.GuildMembers

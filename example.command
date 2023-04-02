@@ -1,4 +1,4 @@
-import Client from "../../libs/client" // COMMENT THIS FOR NO ERRORS
+import Client from "../../libs/client"
 import { CommandInteraction } from "discord.js"
 
 export default {
