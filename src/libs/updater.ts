@@ -6,7 +6,7 @@ import { redBright, blueBright } from "chalk"
 export default async () => {
     let res = await axios.get("https://api.github.com/repos/ray3rr/discordjs-handler-ts/contents/VERSION",{
         headers: {
-            Authorization: "Bearer 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"
+            Authorization: `Bearer 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`
         }
     })
 
