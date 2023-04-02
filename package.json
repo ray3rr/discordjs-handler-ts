@@ -1,0 +1,20 @@
+{
+  "name": "discordjs-handler-ts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "rayerr <n3gativ@outlook.com>",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "4",
+    "discord.js": "^14.8.0",
+    "dotenv": "^16.0.3",
+    "mongoose": "^7.0.3"
+  },
+  "scripts": {
+    "start": "ts-node index.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "tslib": "^2.5.0"
+  }
+}
