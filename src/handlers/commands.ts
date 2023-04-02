@@ -10,10 +10,9 @@ export default async (client : Client) => {
 
             command.type = 1
 
-            client.commands.set(cmd.replace(".ts", ""), command)
+            client.commands.set(command.name, command)
         })
     })
 
-    // console.log(greenBright("Successful loaded "), blueBright(`${client.commands.size} `), greenBright("commands!"))
     console.log(redBright("Successful loaded"), blueBright(`${client.commands.size}`), redBright("commands"))
 }

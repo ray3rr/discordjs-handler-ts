@@ -3,6 +3,7 @@ import command from "../interfaces/command"
 import event from "../interfaces/event"
 import config from "../interfaces/config"
 import schema from "../interfaces/schema"
+import button from "../interfaces/button"
 
 class Client extends discord.Client {
     constructor(options : discord.ClientOptions){
@@ -10,6 +11,8 @@ class Client extends discord.Client {
     }
 
     commands : discord.Collection<String, command> = new discord.Collection<String, command>()
+
+    buttons : discord.Collection<String, button> = new discord.Collection<String, button>()
 
     events : discord.Collection<String, event> = new discord.Collection<String, event>()
 
