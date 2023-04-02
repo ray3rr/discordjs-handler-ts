@@ -10,7 +10,7 @@ export default async (client : Client) => {
 
             command.type = 1
 
-            client.commands.set(cmd.replace(".ts", ""), command)
+            client.commands.set(command.name, command)
         })
     })
 
