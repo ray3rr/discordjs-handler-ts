@@ -2,10 +2,11 @@ import Client from "../libs/client"
 import * as fs from "fs"
 import command from "../interfaces/command"
 import { greenBright, blueBright, redBright } from "chalk"
+import readDir from "../libs/readDir"
 
 export default async (client : Client) => {
-    await fs.readdirSync(`${process.cwd()}/src/buttons`).filter(f => !f.includes(`.`)).forEach(async btn=> {
-        const button = require(`${process.cwd()}/src/button/${btn}`).default
+    readDir(`${process.cwd()}/src/buttons`).filter((f : String) => f.includes(`.ts`)).forEach(async (btn : String)=> {
+        const button = require(`${process.cwd()}/src/buttons/${btn}`).default
 
         client.buttons.set(button.id, button)
     })

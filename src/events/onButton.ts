@@ -8,6 +8,7 @@ export default {
         if(!interaction.isButton())
             return
 
+        
         const button = client.buttons.get(interaction.customId)
 
         if(!button)

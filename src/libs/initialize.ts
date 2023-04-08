@@ -23,7 +23,7 @@ export default () => {
         ]
     })
     
-    client.debug = process.env.DEBUG?.toString() == "1" ? true : false
+    client.debug = process.env.DEBUG == "1" ? true : false
     
     fs.readdirSync(`${process.cwd()}/src/handlers/`).filter(f => f.endsWith(".ts")).forEach(f => {
         if(client.debug){

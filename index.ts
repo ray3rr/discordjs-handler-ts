@@ -4,6 +4,7 @@ import "dotenv/config"
 import { redBright, greenBright, blueBright } from "chalk"
 import initialize from "./src/libs/initialize"
 import updater from "./src/libs/updater"
+import readDir from "./src/libs/readDir"
 
 console.log(redBright("Handler created and maintained by"), blueBright("rayerr#1234\n"))
 
